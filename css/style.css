@@ -1,0 +1,144 @@
+
+.popUp{
+  display: none;
+  position: fixed;
+  top:0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  padding-top: 50px;
+}
+
+.editpopUp{
+  display: none;
+  position: fixed;
+  top:0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  padding-top: 50px;
+}
+form.addTask{
+  font-size: 15px;
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+form.editTask{
+  font-size: 15px;
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+form.login{
+  display: block;
+  margin: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+form.addTask input{
+  padding: 10px;
+  display: block;
+  border:1px solid;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+form.addTask button{
+  width: 100%;
+}
+form.editTask input {
+  padding: 10px;
+  display: block;
+  border:1px solid;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+form.editTask h3 {
+  padding: 10px;
+  
+  box-sizing: border-box;
+}
+form.editTask button{
+  width: 100%;
+}
+input[type=checkbox]{
+  display: inline;
+  width: auto;
+}
+button{
+  padding: 10px;
+  border:1px solid;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+button{
+  background-color: #333;
+  color: #fff;
+}
+html,body{
+  height: 100%;
+  margin: 0;
+}
+.container2{
+  width: 80%;
+  margin: 0 auto;
+  font-size: 0;
+  height: 100%;
+}
+.row{
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 15px;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+
+}
+.notcomptodo{
+  background-color: rgba(244, 155, 1, 0.5);
+  color:#000;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 5px ;
+}
+.comptodo{
+  background-color: rgba(63, 177, 32, 0.4);
+  color: #000;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+h1.text-center{
+  color: orange;
+}
+.panel-danger > .panel-heading{
+  color: #fff;
+  background-color: orange;
+  border-color: orange;
+}
+
+.panel-success > .panel-heading{
+  color: #fff;
+  background-color: green;
+  border-color: green;
+}
