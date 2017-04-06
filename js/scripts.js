@@ -138,10 +138,11 @@
         tx.executeSql("UPDATE tasks SET state ='false' WHERE rowid = ?",[taskId]);
       })
     },
-    "getAllTasks" : function(){
+    "getAllTasks" : function(userId){
+      console.log("user id from indide ",userId);
       return new Promise(function(resolve, reject) {
           db.transaction(function(tx){
-            tx.executeSql("SELECT rowid,* FROM tasks",[],function(tx,res){
+            tx.executeSql("SELECT rowid,* FROM tasks WHERE userId=?",[userId],function(tx,res){
               console.log(res);
               if (res) {
                 if (!res.rows.length) {
@@ -251,11 +252,11 @@ $('body').on('click','#login',function(e){
       console.log(err);
     })
     var userName=localStorage.getItem("userName");
-    $('body').append("<div class=\"container\" >\
+    $('body').append("<div class=\"container header-view\" >\
                         <div class=\"row\" >\
                           <button type=\"button\" class=\"addTodo\" name=\"button\">Add Todo</button>\
                           <div class=\"btn-group\">\
-                            <button class=\"btn btn-default btn-lg dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\
+                            <button class=\"btn btn-success btn-lg dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\
                               "+userName+"<span class=\"caret\"></span>\
                             </button>\
                             <ul class=\"dropdown-menu\">\
@@ -321,7 +322,10 @@ $('body').on('click','#login',function(e){
     })
 
   //Selecting and Displaying Tasks
-  tasks.getAllTasks().then(function(res){
+  var userId = localStorage.getItem("userId");
+  userId = parseInt(userId);
+  console.log("user id from outside ",userId);
+  tasks.getAllTasks(userId).then(function(res){
     // resolve
     console.log(res.data);
     tasks.renderAllTasks(res.data)
@@ -430,6 +434,7 @@ console.log(id);
   e.target.appendChild(document.getElementById(id))
   tasks.updateTaskState1(id);
   console.log('drop!');
+  location.reload();
 }
 function dropnotcomp(e){
   // e.preventDefault();
@@ -440,4 +445,5 @@ console.log(id);
   e.target.appendChild(document.getElementById(id))
   tasks.updateTaskState2(id);
   console.log('drop!');
+  location.reload();
 }

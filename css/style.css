@@ -9,7 +9,26 @@
   background-color: rgba(0,0,0,0.5);
   padding-top: 50px;
 }
-
+.tasks-view{
+  margin-bottom: 30px;
+  border-radius: 5px;
+  background-color: #eee;
+}
+.header-view{
+  margin-bottom: 30px;
+  border-radius: 5px;
+  background-color: #eee;
+}
+/*.btn-group > .btn-default:hover{
+  color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+}
+.btn-group > .btn-default{
+  color: #fff;
+    background-color: ##5cb85c;
+    border-color: #398439;
+}*/
 .editpopUp{
   display: none;
   position: fixed;
@@ -71,7 +90,7 @@ form.editTask input {
 }
 form.editTask h3 {
   padding: 10px;
-  
+
   box-sizing: border-box;
 }
 form.editTask button{
